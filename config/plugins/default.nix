@@ -9,6 +9,5 @@
     ./glow.nix
     ./hex.nix
     ./instant.nix
-    ./obsidian.nix
   ];
 }
