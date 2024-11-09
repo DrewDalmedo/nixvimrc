@@ -12,5 +12,9 @@
     mapleader = ",";
   };
 
-  clipboard.register = "unnamedplus";
+  clipboard = {
+    register = "unnamedplus";
+
+    providers.xclip.enable = true;
+  };
 }

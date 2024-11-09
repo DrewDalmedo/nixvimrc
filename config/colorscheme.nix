@@ -11,7 +11,7 @@
     };
 
     everforest = {
-      enable = false;
+      enable = true;
 
       settings = {
         background = "hard";
@@ -32,13 +32,29 @@
       enable = false;
 
       settings = {
-        terminalColors = true;
+        terminalColors = false;
         theme = "wave";
       };
     };
 
     oxocarbon = {
-      enable = true;
+      enable = false;
     };
+
+    tokyonight = {
+      enable = false;
+
+      settings = {
+        terminal_colors = false;
+        style = "night";
+      };
+    };
+
+    base16 = {
+      enable = false;
+
+      colorscheme = "gruvbox-dark-pale";
+    };
+
   };
 }
