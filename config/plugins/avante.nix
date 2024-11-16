@@ -16,6 +16,21 @@
         model = "gpt-4o";
       };
 
+      claude = {
+        endpoint = "https://api.anthropic.com";
+        model = "claude-3-5-sonnet-latest";
+        temperature = 0;
+        max_tokens = 4096;
+      };
+
+      diff = {
+        autojump = true;
+        debug = false;
+        list_opener = "copen";
+      };
+
+      hints.enabled = true;
+
       # keybinds
       mappings = {
         diff = {
