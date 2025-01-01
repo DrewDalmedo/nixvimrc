@@ -4,7 +4,7 @@ M.hello = function()
   local bufnr = vim.api.nvim_create_buf(true, false)
 
   vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, {
-    "Hello from test.lua!",
+    "Hello from Glacier!",
     "If you can see this message, the module system is working!",
     string.format("Current time: %s", os.date("%H:%M:%S")),
     "",
