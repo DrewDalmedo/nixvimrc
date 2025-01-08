@@ -1,6 +1,6 @@
 {
   plugins.wrapping = {
-    enable = true;
+    enable = false;
 
     settings = {
       notify_on_switch = false;
