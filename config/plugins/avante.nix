@@ -10,7 +10,7 @@
       #   - azure 
       #   - copilot
       #   - gemini 
-      provider = "openai";
+      provider = "claude";
 
       openai = {
         model = "gpt-4o";
