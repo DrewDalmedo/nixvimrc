@@ -2,11 +2,13 @@
   plugins.autoclose = {
     enable = true;
 
-    options = {
-      disabledFiletypes = [
-        "text"
-        "markdown"
-      ]; 
+    settings = {
+      options = {
+        disabled_filetypes = [
+          "text"
+          "markdown"
+        ]; 
+      };
     };
   };
 }
