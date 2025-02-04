@@ -48,4 +48,12 @@
       };
     };
   };
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>al";
+      action = "<cmd>AvanteClear<cr>";
+    }
+  ];
 }
