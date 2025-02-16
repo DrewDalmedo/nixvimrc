@@ -12,5 +12,6 @@
     ./avante.nix
     ./goyo.nix
     ./wrapping.nix
+    ./lsp.nix
   ];
 }
