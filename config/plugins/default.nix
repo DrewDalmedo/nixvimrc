@@ -12,6 +12,7 @@
     ./avante.nix
     ./goyo.nix
     ./wrapping.nix
+    ./jupytext.nix
     ./lsp.nix
   ];
 }
