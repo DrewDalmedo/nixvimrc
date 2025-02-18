@@ -10,6 +10,10 @@
           typeCheckingMode = "basic";
         };
       };
+
+      ltex = {
+        enable = true;
+      };
     };
   };
 }
