@@ -57,6 +57,18 @@
       action = "<C-\\><C-n><cr>";
     }
 
+    # Movements / navigation
+    {
+      mode = "n";
+      key = "<C-d>";
+      action = "<C-d>zz";
+    }
+    {
+      mode = "n";
+      key = "<C-u>";
+      action = "<C-u>zz";
+    }
+
     # Directory navigation
     {
       mode = "n";
