@@ -68,6 +68,16 @@
       key = "<C-u>";
       action = "<C-u>zz";
     }
+    {
+      mode = "n";
+      key = "n";
+      action = "nzzzv";
+    }
+    {
+      mode = "n";
+      key = "N";
+      action = "Nzzzv";
+    }
 
     # Directory navigation
     {
