@@ -42,7 +42,7 @@
     {
       mode = "n";
       key = "<leader>t<CR>";
-      action = ":lua require('glacier').terminal.toggles.toggle_terminal_tab()<CR>";
+      action = ":lua require('glacier').terminal.toggles.toggle_terminal_current_win()<CR>";
       options.silent = true;
     }
     {

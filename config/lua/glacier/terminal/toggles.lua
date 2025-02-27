@@ -48,6 +48,29 @@ M.toggle_terminal_tab = function()
   end
 end
 
+M.toggle_terminal_current_win = function()
+  -- check if terminal buffer exists and is valid
+  if M.terminal_bufnr and vim.api.nvim_buf_is_valid(M.terminal_bufnr) and
+    vim.api.nvim_buf_get_option(M.terminal_bufnr, 'buftype') == 'terminal' then
+    
+    local current_buf = vim.api.nvim_get_current_buf()
+    
+    if current_buf == M.terminal_bufnr then
+      -- if we're already in the terminal buffer, go back to the previous buffer
+      vim.cmd('buffer #')
+    else
+      -- switch to terminal buffer in current window
+      vim.api.nvim_set_current_buf(M.terminal_bufnr)
+      vim.cmd('startinsert')
+    end
+  else
+    -- no valid terminal exists, create one in current window
+    vim.cmd('terminal')
+    M.terminal_bufnr = vim.api.nvim_get_current_buf()
+    vim.cmd('startinsert')
+  end
+end
+
 M.toggle_terminal_bottom_win = function()
   -- check if terminal buffer exists and is valid
   if M.terminal_bufnr and vim.api.nvim_buf_is_valid(M.terminal_bufnr) then
