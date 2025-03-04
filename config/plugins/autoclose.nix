@@ -7,6 +7,7 @@
         disabled_filetypes = [
           "text"
           "markdown"
+          "typst"
         ]; 
       };
     };
