@@ -1,6 +1,18 @@
 {
   plugins.telescope = {
     enable = true;
+
+    settings.defaults = {
+      file_ignore_patterns = [
+        "%.xlsx"
+        "%.jpg"
+        "%.png"
+        "%.webp"
+        "%.pdf"
+        "%.odt"
+        "%.ico"
+      ];
+    };
   };
   
   plugins.web-devicons.enable = true;
