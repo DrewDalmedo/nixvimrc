@@ -1,4 +1,20 @@
+{ pkgs, lib, ... }:
+
 {
+  # dependency for avante
+  # TODO: replace with implementation in nixvim when added
+  extraPlugins = [
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "img-clip-nvim";
+      src = pkgs.fetchFromGitHub {
+        owner = "HakonHarnes";
+        repo = "img-clip.nvim";
+        rev = "24c13df08e3fe66624bed5350a2a780f77f1f65b";  # You can specify a specific version/commit hash here
+        sha256 = "sha256-ASkGB4Id9TF2C0B9wx7l7dSdBKoRJlZfjIOuWvZ3eZc=";
+      };
+    })
+  ];
+
   plugins.avante = {
     enable = true;
 
