@@ -31,3 +31,9 @@ This will load you into an empty buffer.
 There will be different installation steps required depending on whether you're running NixOS or if you're running Nix by itself.
 
 This section will be completed later.
+
+## Bugs ( TODO: ADD ME TO GH ISSUES ASAP )
+
+### Glacier
+
+- Typst: incorrectly indents new lines outside of items
