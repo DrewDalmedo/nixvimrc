@@ -11,11 +11,6 @@ local function starts_with_bullet(line)
   return line:match("^%s*[%-+]")
 end
 
-local function get_indent(line)
-  -- Get the indentation level of the line
-  return line:match("^(%s*)")
-end
-
 local function is_empty_bullet(line)
   -- Check if line is just a bullet point with optional whitespace
   return line:match("^%s*[%-+]%s*$")
@@ -39,9 +34,8 @@ function M.setup()
           -- Clear the current line and move to next line
           return '<C-u><CR>'
         elseif starts_with_bullet(line) then
-          local indent = get_indent(line)
           local bullet = get_bullet_type(line) or '-'
-          return '<CR>' .. indent .. bullet .. ' '
+          return '<CR>' .. bullet .. ' '
         end
         return '<CR>'
       end, {
@@ -54,9 +48,8 @@ function M.setup()
       vim.keymap.set('n', 'o', function()
         local line = vim.api.nvim_get_current_line()
         if starts_with_bullet(line) then
-          local indent = get_indent(line)
           local bullet = get_bullet_type(line) or '-'
-          return 'o' .. indent .. bullet .. ' '
+          return 'o' .. bullet .. ' '
         end
         return 'o'
       end, {
@@ -70,9 +63,8 @@ function M.setup()
         local curr_line_nr = vim.api.nvim_win_get_cursor(0)[1]
         local prev_line = vim.api.nvim_buf_get_lines(0, curr_line_nr - 2, curr_line_nr - 1, false)[1]
         if prev_line and starts_with_bullet(prev_line) then
-          local indent = get_indent(prev_line)
           local bullet = get_bullet_type(prev_line) or '-'
-          return 'O' .. indent .. bullet .. ' '
+          return 'O' .. bullet .. ' '
         end
         return 'O'
       end, {
