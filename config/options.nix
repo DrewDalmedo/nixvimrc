@@ -17,4 +17,8 @@
 
     providers.xclip.enable = true;
   };
+
+  extraConfigLua = ''
+    require('glacier.ftbindings')
+  '';
 }
