@@ -3,13 +3,16 @@
     enable = true;
 
     settings = {
-      options = {
-        disabled_filetypes = [
-          "text"
-          "markdown"
-          "typst"
-        ]; 
+      keys = {
+        "'" = {
+          escape = true;
+          close = true;
+          pair = "''";
+          disabled_filetypes = ["" "text" "markdown" "typst"];
+        };
       };
+
     };
+
   };
 }
