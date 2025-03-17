@@ -16,12 +16,6 @@
           pair = "<>";
           enabled_filetypes = ["typescriptreact" "javascriptreact"];
         };
-        "</" = {
-          escape = true;
-          close = true;
-          pair = "</>";
-          enabled_filetypes = ["typescriptreact" "javascriptreact"];
-        };
       };
 
     };
