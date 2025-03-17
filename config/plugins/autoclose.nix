@@ -10,6 +10,18 @@
           pair = "''";
           disabled_filetypes = ["" "text" "markdown" "typst"];
         };
+        "<" = {
+          escape = true;
+          close = true;
+          pair = "<>";
+          enabled_filetypes = ["typescriptreact" "javascriptreact"];
+        };
+        "</" = {
+          escape = true;
+          close = true;
+          pair = "</>";
+          enabled_filetypes = ["typescriptreact" "javascriptreact"];
+        };
       };
 
     };
