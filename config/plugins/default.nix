@@ -15,5 +15,6 @@
     ./jupytext.nix
     ./lsp.nix
     ./typst.nix
+    ./neorg.nix
   ];
 }
